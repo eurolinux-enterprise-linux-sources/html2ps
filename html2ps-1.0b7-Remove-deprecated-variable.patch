@@ -1,0 +1,26 @@
+From cf9d76ef6b15bb31d86313e6b97ed13910908044 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Petr=20P=C3=ADsa=C5=99?= <ppisar@redhat.com>
+Date: Wed, 16 May 2012 14:40:41 +0200
+Subject: [PATCH] Remove deprecated $[ variable
+
+Usage of the variable is deprecated since perl 5.12 and it default to
+0 either. See <https://bugzilla.redhat.com/show_bug.cgi?id=822117>.
+---
+ html2ps |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+diff --git a/html2ps b/html2ps
+index ba6bf3b..a5f363d 100755
+--- a/html2ps
++++ b/html2ps
+@@ -3405,7 +3405,6 @@ sub Getopts {
+   local($optlist)=@_;
+   local(@args,$_,$opt,$opts,$rest,$olist,$plist,$found,@popts);
+   local($errs)=0;
+-  local($[)=0;
+   @args=split( /\|/, $optlist );
+   for $opt (@args) {
+     if(substr($opt,-1,1) ne ':') {$olist.=$opt}
+-- 
+1.7.7.6
+
