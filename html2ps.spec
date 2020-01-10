@@ -1,7 +1,7 @@
 %define my_subversion b7
 Name:           html2ps
 Version:        1.0
-Release:        0.13.%{my_subversion}%{?dist}
+Release:        0.14.%{my_subversion}%{?dist}
 Summary:        HTML to PostScript converter
 
 Group:          Applications/Publishing
@@ -101,6 +101,9 @@ desktop-file-install \
 %{_datadir}/applications/*xhtml2ps.desktop
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.0-0.14.b7
+- Mass rebuild 2013-12-27
+
 * Wed Apr 24 2013 Jon Ciesla <limburgher@gmail.com> - 1.0-0.13.b7
 - Drop desktop vendor tag.
 
